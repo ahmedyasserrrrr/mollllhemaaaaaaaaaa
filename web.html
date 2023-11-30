@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>موقع تعريفي</title>
+</head>
+<body>
+    
+    <input type="text" id="whatsapp-input" placeholder="Type a message...">
+    <button id="send-button" onclick="sendMessage()">Send</button>
+
+    <script>
+        function sendMessage() {
+            var inputValue = document.getElementById("whatsapp-input").value;
+            var whatsappNumber = "01021700756"; // Replace with your WhatsApp number
+            var whatsappURL = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(inputValue);
+
+            // Open a new window or tab with the WhatsApp URL
+            window.open(whatsappURL, "_blank");
+        }
+    </script>
+
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        text-align: center;
+        margin: 50px;
+    }
+
+    #whatsapp-input {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    #send-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #25D366;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+    }
+</style>
+
+
+</body>
+</html>
